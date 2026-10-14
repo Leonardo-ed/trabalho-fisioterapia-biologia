@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibrose Cística & Atuação Fisioterapêutica | Portal Universitário</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        tealbrand: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Custom Scrollbar and Canvas Styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0ea5e9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-tealbrand-500 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    <i class="fa-solid font-lungs"></i>FC
+                </div>
+                <div>
+                    <span class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-800 to-tealbrand-700">FibroCística</span>
+                    <span class="block text-xs text-slate-500 font-medium">Fisioterapia & Ciência</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#hero" class="hover:text-brand-600 transition-colors">Início</a>
+                <a href="#cftr" class="hover:text-brand-600 transition-colors">Proteína CFTR</a>
+                <a href="#fisiopatologia" class="hover:text-brand-600 transition-colors">Fisiopatologia</a>
+                <a href="#clinica" class="hover:text-brand-600 transition-colors">Clínica & Diagnóstico</a>
+                <a href="#fisioterapia" class="hover:text-brand-600 transition-colors">Fisioterapia</a>
+                <a href="#artigos" class="hover:text-brand-600 transition-colors">Artigos</a>
+                <a href="#humanizado" class="hover:text-brand-600 transition-colors">Humanização</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="#quiz" class="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-600 to-tealbrand-600 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg hover:opacity-95 transition-all">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>Quiz Interativo</span>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-600 hover:text-brand-600 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Início</a>
+            <a href="#cftr" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Proteína CFTR & Simulador</a>
+            <a href="#fisiopatologia" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Fisiopatologia e Mutações</a>
+            <a href="#clinica" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Clínica e Diagnóstico</a>
+            <a href="#fisioterapia" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Atuação Fisioterapêutica</a>
+            <a href="#artigos" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Biblioteca Científica</a>
+            <a href="#humanizado" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Cuidado Humanizado</a>
+        </div>
+    </header>
+
+    <!-- SECTION HERO / APRESENTAÇÃO -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-brand-50/60 via-slate-50 to-white relative overflow-hidden">
+        <div class="absolute top-10 right-10 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-tealbrand-500/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-100/80 text-brand-800 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-brand-200">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        <span>Apresentação Acadêmica de Fisioterapia</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Fibrose Cística & a <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-tealbrand-600">Reabilitação Multidisciplinar</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Uma imersão completa da genética molecular às condutas fisioterapêuticas de higiene brônquica e recondicionamento motor, sob uma ótica integrativa, científica e humanizada.
+                    </p>
+
+                    <!-- Detalhes do Grupo / Projeto -->
+                    <div class="p-5 rounded-2xl bg-white shadow-sm border border-slate-200/80 flex flex-wrap gap-4 items-center justify-between text-left">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800">Curso de Fisioterapia</h4>
+                                <p class="text-xs text-slate-500">Disciplina de Pneumologia & Reabilitação</p>
+                            </div>
+                        </div>
+                        <div class="text-xs text-slate-600 border-l border-slate-200 pl-4 space-y-1">
+                            <p><strong class="text-slate-800">Autores:</strong> Equipe de Fisioterapia / Projeto Acadêmico</p>
+                            <p><strong class="text-slate-800">Orientação:</strong> Corpo Docente de Fisioterapia</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#cftr" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-brand-600/30 transition-all flex items-center space-x-2">
+                            <span>Explorar Simulador CFTR</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <a href="#artigos" class="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-6 py-3 rounded-xl font-semibold shadow-sm transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-book-open text-brand-600"></i>
+                            <span>Artigos Científicos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Banner Ilustrativo com Métricas -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-brand-800 to-slate-900 p-8 text-white">
+                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-tealbrand-500/20 rounded-full blur-xl"></div>
+                        <h3 class="text-xl font-bold mb-4 border-b border-slate-700/60 pb-3 flex items-center justify-between">
+                            <span>Panorama da Doença</span>
+                            <i class="fa-solid fa-dna text-tealbrand-400"></i>
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl font-extrabold text-tealbrand-400">1:7.500</div>
+                                <div class="text-xs text-slate-300">Incidência média em caucasianos (Autossômica Recessiva)</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl font-extrabold text-brand-400">+2.000</div>
+                                <div class="text-xs text-slate-300">Mutações conhecidas descritas no Gene CFTR</div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl font-extrabold text-amber-400">F508del</div>
+                                <div class="text-xs text-slate-300">Mutação mais frequente no mundo (~70% dos alelos)</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                            <span>Fonte: Cystic Fibrosis Foundation</span>
+                            <span class="text-tealbrand-400 font-semibold">Atualizado 2024-2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 1: PROTEÍNA CFTR & SIMULADOR INTERATIVO -->
+    <section id="cftr" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Módulo Fisiológico</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">A Proteína CFTR e o Equilíbrio Hidroeletrolítico</h3>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    A proteína CFTR (*Cystic Fibrosis Transmembrane Conductance Regulator*) atua como canal iônico de Cl⁻ e HCO₃⁻ na membrana apical. Veja abaixo o simulador interativo que contrapõe a fisiologia normal e o colapso mucociliar na Fibrose Cística.
+                </p>
+            </div>
+
+            <!-- SIMULADOR INTERATIVO (CANVAS/INTERAÇÃO) -->
+            <div class="bg-slate-900 rounded-3xl p-6 lg:p-8 text-white shadow-2xl">
+                <!-- Controls -->
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-xs text-slate-400 block font-medium">Selecione o Estado Fisiológico:</span>
+                        <div class="inline-flex p-1 bg-slate-800 rounded-xl mt-2 border border-slate-700">
+                            <button id="sim-normal-btn" onclick="setSimMode('normal')" class="px-5 py-2 rounded-lg text-sm font-bold transition-all bg-tealbrand-600 text-white shadow">
+                                <i class="fa-solid fa-check-circle mr-1.5"></i>Fisiologia Normal
+                            </button>
+                            <button id="sim-cf-btn" onclick="setSimMode('cf')" class="px-5 py-2 rounded-lg text-sm font-bold transition-all text-slate-400 hover:text-white">
+                                <i class="fa-solid fa-triangle-exclamation mr-1.5"></i>Fibrose Cística
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right text-xs text-slate-400 max-w-md hidden md:block">
+                        <span class="text-brand-400 font-bold">Instruções:</span> Observe a passagem dos íons e a espessura da camada periciliar de líquido (LSA) e do muco em tempo real.
+                    </div>
+                </div>
+
+                <!-- Canvas + Painel Explicativo -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 flex justify-center flex-col items-center">
+                        <canvas id="cftrCanvas" width="600" height="350" class="w-full max-w-xl bg-slate-950 rounded-2xl border border-slate-800 shadow-inner"></canvas>
+                        <div class="flex items-center space-x-6 text-xs text-slate-400 mt-4">
+                            <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-cyan-400 inline-block mr-1.5"></span>Cloro (Cl⁻)</span>
+                            <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block mr-1.5"></span>Sódio (Na⁺)</span>
+                            <span class="flex items-center"><span class="w-3 h-3 rounded-full bg-blue-500 inline-block mr-1.5"></span>Água (H₂O)</span>
+                        </div>
+                    </div>
+
+                    <!-- Side Status Info -->
+                    <div class="lg:col-span-5 space-y-6 bg-slate-800/60 p-6 rounded-2xl border border-slate-700/80">
+                        <div id="sim-status-header" class="flex items-center space-x-3 text-tealbrand-400 font-bold text-lg">
+                            <i class="fa-solid fa-shield-halved text-xl"></i>
+                            <span>Canal CFTR Operacional</span>
+                        </div>
+                        <p id="sim-status-desc" class="text-sm text-slate-300 leading-relaxed">
+                            O canal de cloreto está aberto. O efluxo constante de <strong class="text-cyan-300">Cl⁻</strong> inibe o canal ENaC, mantendo o transporte de <strong class="text-amber-300">Na⁺</strong> equilibrado. A água permanece no lúmen, garantindo um líquido periciliar fluido e batimento ciliar livre.
+                        </p>
+
+                        <div class="space-y-3 text-xs border-t border-slate-700 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Hidratação do LSA:</span>
+                                <span id="sim-hydration" class="font-bold text-emerald-400">Adequada (100%)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Viscosidade do Muco:</span>
+                                <span id="sim-viscosity" class="font-bold text-emerald-400">Fluida / Normal</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Depuração Mucociliar:</span>
+                                <span id="sim-clearance" class="font-bold text-emerald-400">Ativa e Preservada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 2: FISIOPATOLOGIA E CLASSES DE MUTAÇÃO -->
+    <section id="fisiopatologia" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Genética & Alterações</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Classes de Mutações no Gene CFTR</h3>
+                <p class="text-slate-600 text-sm">
+                    A severidade fenotípica depende da classe mutacional do gene. Filtre e examine os mecanismos de defeito proteico abaixo.
+                </p>
+            </div>
+
+            <!-- Filtros de Mutação -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterMutations('all')" class="mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white transition-all" data-class="all">Todas as Classes</button>
+                <button onclick="filterMutations('class1')" class="mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all" data-class="class1">Classe I (Sem Síntese)</button>
+                <button onclick="filterMutations('class2')" class="mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all" data-class="class2">Classe II (Enovelamento/F508del)</button>
+                <button onclick="filterMutations('class3')" class="mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all" data-class="class3">Classe III (Regulação/Gating)</button>
+                <button onclick="filterMutations('class4')" class="mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all" data-class="class4">Classe IV-VI (Condutância/Quantidade)</button>
+            </div>
+
+            <!-- Grid de Cards de Mutações -->
+            <div id="mutations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card Class I -->
+                <div class="mutation-card class1 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">Classe I</span>
+                        <i class="fa-solid fa-ban text-red-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Ausência de Síntese</h4>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">Presença de códons de parada prematuros. Nenhuma proteína funcional é produzida na célula.</p>
+                    <div class="text-xs bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <strong class="text-slate-700">Exemplo clássico:</strong> G542X, W1282X
+                    </div>
+                </div>
+
+                <!-- Card Class II -->
+                <div class="mutation-card class2 bg-white p-6 rounded-2xl border-2 border-brand-500 shadow-md hover:shadow-lg transition-all relative">
+                    <div class="absolute -top-3 right-4 bg-brand-600 text-white text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded-full">Mais Frequente</div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700">Classe II</span>
+                        <i class="fa-solid fa-triangle-exclamation text-amber-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Erro de Processamento</h4>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">Erro de enovelamento proteico no Retículo Endoplasmático; destruída antes de atingir a membrana.</p>
+                    <div class="text-xs bg-brand-50 p-3 rounded-xl border border-brand-100 text-brand-900">
+                        <strong class="text-brand-800">Exemplo principal:</strong> F508del (~70% dos casos globais)
+                    </div>
+                </div>
+
+                <!-- Card Class III -->
+                <div class="mutation-card class3 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700">Classe III</span>
+                        <i class="fa-solid fa-lock text-blue-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Defeito de Regulação (Gating)</h4>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">A proteína atinge a membrana apical, porém o portão iônico não abre em resposta ao cAMP.</p>
+                    <div class="text-xs bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <strong class="text-slate-700">Exemplo clássico:</strong> G551D
+                    </div>
+                </div>
+
+                <!-- Card Class IV -->
+                <div class="mutation-card class4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-700">Classe IV</span>
+                        <i class="fa-solid fa-gauge-low text-teal-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Redução da Condutância</h4>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">O canal está presente e abre, mas o fluxo e o diâmetro de passagem de Cl⁻ estão reduzidos.</p>
+                    <div class="text-xs bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <strong class="text-slate-700">Exemplo clássico:</strong> R117H
+                    </div>
+                </div>
+
+                <!-- Card Class V-VI -->
+                <div class="mutation-card class4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-700">Classe V e VI</span>
+                        <i class="fa-solid fa-layer-group text-purple-500 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Síntese Reduzida / Instabilidade</h4>
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">Redução na quantidade de transcretos normais ou degradação acelerada na membrana da célula.</p>
+                    <div class="text-xs bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <strong class="text-slate-700">Exemplo clássico:</strong> 3849+10kbC->T
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ciclo Vicioso da Doença Pulmonar -->
+            <div class="mt-16 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <h4 class="text-xl font-bold text-slate-900 text-center mb-8">O Tríptico Fisiopatológico e Círculo Vicioso Pulmonar</h4>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-2xl bg-brand-50 border border-brand-100">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold">1</div>
+                        <h5 class="font-bold text-slate-800 text-sm mb-1">Obstrução Mucosa</h5>
+                        <p class="text-xs text-slate-600">Muco espesso e desidratado aprisiona ar e impacta pequenas vias aéreas.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold">2</div>
+                        <h5 class="font-bold text-slate-800 text-sm mb-1">Infecção Crônica</h5>
+                        <p class="text-xs text-slate-600">Colonização por *P. aeruginosa* e *S. aureus* pela falha de depuração.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-red-50 border border-red-100">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">3</div>
+                        <h5 class="font-bold text-slate-800 text-sm mb-1">Inflamação Neutrofílica</h5>
+                        <p class="text-xs text-slate-600">Liberação de elastase e DNA extracelular, aumentando a viscosidade.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-100 border border-slate-200">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold">4</div>
+                        <h5 class="font-bold text-slate-800 text-sm mb-1">Dano Estrutural</h5>
+                        <p class="text-xs text-slate-600">Remodelamento brônquico irreversível e bronquiectasias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 3: MANIFESTAÇÕES CLÍNICAS E DIAGNÓSTICO -->
+    <section id="clinica" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Afeção Multissistêmica</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Manifestações Clínicas e Linha do Tempo Diagnóstica</h3>
+            </div>
+
+            <!-- TABS INTERATIVAS (Sistemas Afetados) -->
+            <div class="mb-16">
+                <div class="flex justify-center border-b border-slate-200 space-x-2 sm:space-x-8 overflow-x-auto">
+                    <button onclick="switchTab('resp')" id="tab-resp" class="tab-btn py-4 px-3 border-b-2 border-brand-600 font-bold text-sm text-brand-600 flex items-center space-x-2 whitespace-nowrap">
+                        <i class="fa-solid fa-lungs"></i>
+                        <span>Sistema Respiratório</span>
+                    </button>
+                    <button onclick="switchTab('dig')" id="tab-dig" class="tab-btn py-4 px-3 border-b-2 border-transparent font-medium text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2 whitespace-nowrap">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Gastrintestinal & Nutrição</span>
+                    </button>
+                    <button onclick="switchTab('sweat')" id="tab-sweat" class="tab-btn py-4 px-3 border-b-2 border-transparent font-medium text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2 whitespace-nowrap">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span>Glândulas Sudoríparas</span>
+                    </button>
+                    <button onclick="switchTab('reprod')" id="tab-reprod" class="tab-btn py-4 px-3 border-b-2 border-transparent font-medium text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2 whitespace-nowrap">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <span>Sistema Reprodutor</span>
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="mt-8 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200">
+                    <div id="content-resp" class="tab-content space-y-4">
+                        <h4 class="text-xl font-bold text-slate-900">Comprometimento Pulmonar e Vias Aéreas</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Tosse crônica persistente (inicialmente seca, evoluindo para produtiva com secreção purulenta), hiperinsuflação torácica, sibilos recorrentes, atelectasias de repetição e formação de bronquiectasias. A limitação ao fluxo aéreo é mensurada pelo VEF₁ na espirometria.
+                        </p>
+                    </div>
+                    <div id="content-dig" class="tab-content hidden space-y-4">
+                        <h4 class="text-xl font-bold text-slate-900">Insuficiência Pancreática Exócrina e Má Absorção</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Ocorrendo em ~85% dos pacientes por obstrução dos ductos pancreáticos pelos plugues de muco. Resulta em esteatorreia (fezes volumosas, gordurosas e fétidas), desnutrição proteinocalórica, déficit no crescimento e deficiência de vitaminas lipossolúveis (A, D, E, K).
+                        </p>
+                    </div>
+                    <div id="content-sweat" class="tab-content hidden space-y-4">
+                        <h4 class="text-xl font-bold text-slate-900">Alteração do Suor e Risco de Desidratação</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            A incapacidade de reabsorver $Na^+$ e $Cl^-$ nos ductos sudoríparos produz um suor excessivamente salgado ("sinal do beijo salgado"). Em dias quentes ou na febre, há risco elevado de desidratação hiponatremica e alcalose metabólica.
+                        </p>
+                    </div>
+                    <div id="content-reprod" class="tab-content hidden space-y-4">
+                        <h4 class="text-xl font-bold text-slate-900">Impacto na Fertilidade</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Mais de 95% dos homens com FC apresentam azoospermia obstrutiva decorrente da ausência congênita bilateral dos vasos deferentes (CBAVD). Nas mulheres, a fertilidade pode estar reduzida devido à maior espessura do muco cervical.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINHA DO TEMPO DIAGNÓSTICA -->
+            <div class="bg-gradient-to-r from-brand-900 to-slate-900 text-white p-8 rounded-3xl">
+                <h4 class="text-xl font-bold mb-8 text-center">Jornada Diagnóstica Padrão-Ouro</h4>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2">
+                        <div class="text-xs font-bold text-brand-400">PASSO 01</div>
+                        <h5 class="font-bold text-base text-white">Triagem Neonatal</h5>
+                        <p class="text-xs text-slate-300">Teste do Pezinho (dosagem de TIR/TIR) coletado entre o 3º e 5º dia de vida.</p>
+                    </div>
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2">
+                        <div class="text-xs font-bold text-tealbrand-400">PASSO 02</div>
+                        <h5 class="font-bold text-base text-white">Teste do Suor</h5>
+                        <p class="text-xs text-slate-300">Padrão-Ouro por iontoforese pela pilocarpina. Dosagem de $Cl^- \ge 60\text{ mmol/L}$ confirma o diagnóstico.</p>
+                    </div>
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2">
+                        <div class="text-xs font-bold text-amber-400">PASSO 03</div>
+                        <h5 class="font-bold text-base text-white">Painel Genético</h5>
+                        <p class="text-xs text-slate-300">Mapeamento molecular para identificação das duas mutações no gene CFTR.</p>
+                    </div>
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700 space-y-2">
+                        <div class="text-xs font-bold text-purple-400">PASSO 04</div>
+                        <h5 class="font-bold text-base text-white">Acompanhamento</h5>
+                        <p class="text-xs text-slate-300">Espirometria periódica (medida do $VEF_1$), Tomografia e microbiologia de escarro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 4: ATUAÇÃO FISIOTERAPÊUTICA E TÉCNICAS -->
+    <section id="fisioterapia" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Reabilitação & Desobstrução</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Abordagem Fisioterapêutica Integrativa</h3>
+                <p class="text-slate-600 text-sm">
+                    A fisioterapia respiratória e motora é indispensável e contínua durante toda a vida do paciente, promovendo depuração de secreções e ganho de capacidade funcional.
+                </p>
+            </div>
+
+            <!-- Grid de Técnicas Fisioterapêuticas (Accordions/Cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Drenagem Autógena -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Drenagem Autógena (DA)</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Técnica de respiração controlada que ajusta volumes expiratórios e inspiratórios em 3 fases: Descolar (baixo volume), Acumular (médio volume) e Expelir (alto volume). Garante desobstrução sem colapso brônquico.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-brand-700 bg-brand-50 px-2.5 py-1 rounded-md">Independência do Paciente</span>
+                </div>
+
+                <!-- Oscilação Oral de Alta Frequência (OOAF) -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-tealbrand-50 text-tealbrand-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">OOAF / Flutter® & Shaker®</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Combina pressão expiratória positiva (PEP) com oscilações mecânicas da coluna de ar. Altera a viscosidade do muco por **tixotropismo** (deixa o muco fluido) e mantém pequenas vias abertas.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-tealbrand-700 bg-tealbrand-50 px-2.5 py-1 rounded-md">Fenômeno de Tixotropismo</span>
+                </div>
+
+                <!-- AFE & ELTGOL -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-lungs-virus"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">AFE & ELTGOL</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Aumento do Fluxo Expiratório e Expiração Lenta Total com a Glote Aberta em decúbito lateral. Utilizam a variação do fluxo para deslocar secreções periféricas em direção à traqueia.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">Remoção Periférica</span>
+                </div>
+
+                <!-- Huffing -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-face-grimace"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Técnica de Expiração Forçada (Huffing)</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Expiração rápida com glote aberta. Substitui crises de tosse paroxística e exaustiva, economizando energia e prevenindo colapso dinâmico das vias aéreas instáveis.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">Economia de Energia</span>
+                </div>
+
+                <!-- Exercício Físico Aeróbio -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Recondicionamento Físico & Aeróbio</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        O exercício físico atua como desobstruidor natural das vias aéreas, estimula a ventilação profunda, preserva a massa magra e melhora a densidade mineral óssea.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Condicionamento Motor</span>
+                </div>
+
+                <!-- Treino Muscular Inspiratório (TMI) -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Treino Muscular Inspiratório (TMI)</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Prescrito com cargas lineares (ex: Powerbreathe®) para fortalecimento do diafragma e músculos acessórios, diminuindo a sensação de dispneia nas AVDs.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">Fortalecimento Diafragmático</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 5: GALERIA DE ARTIGOS CIENTÍFICOS INTERATIVA -->
+    <section id="artigos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Evidência Científica</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Biblioteca de Artigos Científicos</h3>
+                <p class="text-slate-600 text-sm">
+                    Pesquise e filtre os principais artigos acadêmicos nacionais e internacionais selecionados para fundamentar esta apresentação.
+                </p>
+            </div>
+
+            <!-- Busca e Filtros -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                <div class="relative w-full sm:w-96">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400"></i>
+                    <input type="text" id="article-search" oninput="renderArticles()" placeholder="Buscar por título, autor ou palavra-chave..." class="w-full pl-10 pr-4 py-2.5 bg-white rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button onclick="setArticleFilter('todos')" class="art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-600 text-white" data-category="todos">Todos</button>
+                    <button onclick="setArticleFilter('fisioterapia')" class="art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-600 border border-slate-300" data-category="fisioterapia">Fisioterapia</button>
+                    <button onclick="setArticleFilter('genetica')" class="art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-600 border border-slate-300" data-category="genetica">Genética / CFTR</button>
+                    <button onclick="setArticleFilter('humanizado')" class="art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-600 border border-slate-300" data-category="humanizado">Humanização</button>
+                </div>
+            </div>
+
+            <!-- Grid de Artigos -->
+            <div id="articles-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Renderizado via Javascript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 6: QUIZ INTERATIVO -->
+    <section id="quiz" class="py-20 bg-gradient-to-b from-slate-900 to-brand-950 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-3">
+                <span class="px-3 py-1 bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded-full text-xs font-bold uppercase tracking-widest">Atividade em Sala de Aula</span>
+                <h3 class="text-3xl font-extrabold text-white">Quiz de Conhecimento Acadêmico</h3>
+                <p class="text-slate-300 text-sm">Testa os conhecimentos apresentados sobre a Fibrose Cística e o papel do fisioterapeuta.</p>
+            </div>
+
+            <!-- Quiz Box Container -->
+            <div class="bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+                
+                <!-- Barra de Progresso -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                        <span id="quiz-step-text">Pergunta 1 de 5</span>
+                        <span id="quiz-score-text">Pontuação: 0</span>
+                    </div>
+                    <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                        <div id="quiz-progress-bar" class="bg-gradient-to-r from-brand-500 to-tealbrand-500 h-full w-1/5 transition-all duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Pergunta e Respostas -->
+                <div id="quiz-content" class="space-y-6">
+                    <h4 id="quiz-question" class="text-lg sm:text-xl font-bold text-white leading-relaxed">
+                        Carregando pergunta...
+                    </h4>
+
+                    <div id="quiz-options" class="space-y-3">
+                        <!-- Opções injetadas via JS -->
+                    </div>
+
+                    <div id="quiz-feedback" class="hidden p-4 rounded-xl text-xs sm:text-sm font-medium"></div>
+
+                    <div class="flex justify-end pt-4">
+                        <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-md transition-all">
+                            Próxima Pergunta <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resultado Final -->
+                <div id="quiz-result" class="hidden text-center space-y-6 py-6">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-tealbrand-500/20 text-tealbrand-400 flex items-center justify-center text-4xl border border-tealbrand-500/40">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white">Apresentação Concluída com Sucesso!</h4>
+                    <p id="quiz-result-msg" class="text-slate-300 text-sm max-w-md mx-auto">
+                        Você acertou X de Y perguntas.
+                    </p>
+                    <button onclick="restartQuiz()" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-3 rounded-xl font-bold shadow-lg transition-all inline-flex items-center space-x-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Reiniciar Quiz</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MÓDULO 7: CUIDADO HUMANIZADO -->
+    <section id="humanizado" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-50 via-tealbrand-50/30 to-slate-50 p-8 sm:p-12 rounded-3xl border border-brand-100 shadow-sm">
+                <div class="max-w-3xl mx-auto text-center space-y-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-600 text-white flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900">A Dimensão Humanizada e Biopsicossocial</h3>
+                    <blockquote class="text-slate-700 italic text-base sm:text-lg leading-relaxed">
+                        "O tratamento da Fibrose Cística exige de duas a três horas diárias de rotina terapêutica. O papel da fisioterapia vai muito além do clearance mucociliar: trata-se de capacitar o indivíduo, acolher a família e construir pontes para a autonomia e qualidade de vida."
+                    </blockquote>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-left">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 text-brand-700"><i class="fa-solid fa-user-check mr-1.5"></i>Adesão & Autonomia</h5>
+                            <p class="text-xs text-slate-600">Envolvimento ativo do paciente na escolha dos recursos de desobstrução, aumentando a adesão ao longo dos anos.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 text-tealbrand-700"><i class="fa-solid fa-users mr-1.5"></i>Suporte Familiar</h5>
+                            <p class="text-xs text-slate-600">Treinamento e acolhimento dos cuidadores para reduzir o desgaste psicológico da rotina diária.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1 text-purple-700"><i class="fa-solid fa-person-arrow-up-from-line mr-1.5"></i>Transição Adulta</h5>
+                            <p class="text-xs text-slate-600">Acompanhamento contínuo no envelhecimento com FC com a chegada dos novos moduladores proteicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2 text-white font-bold">
+                <i class="fa-solid fa-graduation-cap text-brand-500 text-xl"></i>
+                <span>Trabalho Acadêmico Universitário - Fisioterapia</span>
+            </div>
+            <p class="text-xs text-slate-500 max-w-xl mx-auto">
+                Desenvolvido para fins de apresentação acadêmica e disseminação científica sobre a Fibrose Cística e o papel da Fisioterapia Respiratória e Motora.
+            </p>
+            <div class="text-xs text-slate-600 pt-4 border-t border-slate-900">
+                &copy; 2026 - Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LÓGICA E INTERATIVIDADE -->
+    <script>
+        // -----------------------------------------------------------------
+        // 1. SIMULADOR INTERATIVO DA PROTEÍNA CFTR (CANVAS 2D)
+        // -----------------------------------------------------------------
+        const canvas = document.getElementById('cftrCanvas');
+        const ctx = canvas.getContext('2d');
+        let simMode = 'normal'; // 'normal' ou 'cf'
+        let particles = [];
+
+        function setSimMode(mode) {
+            simMode = mode;
+            const btnNormal = document.getElementById('sim-normal-btn');
+            const btnCF = document.getElementById('sim-cf-btn');
+            const statusHeader = document.getElementById('sim-status-header');
+            const statusDesc = document.getElementById('sim-status-desc');
+            const hydr = document.getElementById('sim-hydration');
+            const visc = document.getElementById('sim-viscosity');
+            const clear = document.getElementById('sim-clearance');
+
+            if (mode === 'normal') {
+                btnNormal.className = "px-5 py-2 rounded-lg text-sm font-bold transition-all bg-tealbrand-600 text-white shadow";
+                btnCF.className = "px-5 py-2 rounded-lg text-sm font-bold transition-all text-slate-400 hover:text-white";
+                
+                statusHeader.innerHTML = `<i class="fa-solid fa-shield-halved text-xl"></i><span>Canal CFTR Operacional</span>`;
+                statusHeader.className = "flex items-center space-x-3 text-tealbrand-400 font-bold text-lg";
+                statusDesc.innerHTML = `O canal de cloreto está aberto. O efluxo constante de <strong class="text-cyan-300">Cl⁻</strong> inibe o ENaC, regulando a entrada de <strong class="text-amber-300">Na⁺</strong>. A água (H₂O) permanece no lúmen, mantendo a camada de fluido periciliar adequada e o batimento ciliar ativo.`;
+
+                hydr.textContent = "Adequada (100%)";
+                hydr.className = "font-bold text-emerald-400";
+                visc.textContent = "Fluida / Normal";
+                visc.className = "font-bold text-emerald-400";
+                clear.textContent = "Ativa e Preservada";
+                clear.className = "font-bold text-emerald-400";
+            } else {
+                btnCF.className = "px-5 py-2 rounded-lg text-sm font-bold transition-all bg-red-600 text-white shadow";
+                btnNormal.className = "px-5 py-2 rounded-lg text-sm font-bold transition-all text-slate-400 hover:text-white";
+
+                statusHeader.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-xl"></i><span>Canal CFTR Disfuncional / Ausente</span>`;
+                statusHeader.className = "flex items-center space-x-3 text-red-400 font-bold text-lg";
+                statusDesc.innerHTML = `Sem a saída de <strong class="text-cyan-300">Cl⁻</strong>, o canal ENaC fica hiperativo, promovendo uma reabsorção maciça de <strong class="text-amber-300">Na⁺</strong> e arrasto osmótico de água para DENTRO da célula. O muco seca, torna-se viscoso e esmaga os cílios epiteliais.`;
+
+                hydr.textContent = "Severamente Reduzida (<20%)";
+                hydr.className = "font-bold text-red-400";
+                visc.textContent = "Hiperviscoso / Denso";
+                visc.className = "font-bold text-red-400";
+                clear.textContent = "Bloqueada / Colapso Ciliar";
+                clear.className = "font-bold text-red-400";
+            }
+            initParticles();
+        }
+
+        // Particle Class for Ion Simulation
+        class Particle {
+            constructor(type) {
+                this.type = type; // 'cl', 'na', 'h2o'
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * (canvas.width - 40) + 20;
+                if (this.type === 'cl') {
+                    // Cl- goes OUT in normal, STAYS inside in CF
+                    this.y = simMode === 'normal' ? 220 : 280;
+                    this.vy = simMode === 'normal' ? -1.5 : (Math.random() - 0.5) * 0.5;
+                } else if (this.type === 'na') {
+                    // Na+ enters heavily in CF
+                    this.y = simMode === 'normal' ? 80 : 60;
+                    this.vy = simMode === 'normal' ? 0.3 : 2.0;
+                } else {
+                    // H2O
+                    this.y = simMode === 'normal' ? 90 : 80;
+                    this.vy = simMode === 'normal' ? (Math.random() - 0.5) * 0.4 : 1.8;
+                }
+                this.radius = this.type === 'h2o' ? 3 : 5;
+            }
+
+            update() {
+                this.y += this.vy;
+                if (this.y < 30 || this.y > 330) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                if (this.type === 'cl') ctx.fillStyle = '#22d3ee'; // cyan
+                else if (this.type === 'na') ctx.fillStyle = '#fbbf24'; // amber
+                else ctx.fillStyle = '#3b82f6'; // blue
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 20; i++) particles.push(new Particle('cl'));
+            for (let i = 0; i < 25; i++) particles.push(new Particle('na'));
+            for (let i = 0; i < 25; i++) particles.push(new Particle('h2o'));
+        }
+
+        function drawMembrane() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Layer Labels
+            ctx.font = '11px Inter, sans-serif';
+            ctx.fillStyle = '#94a3b8';
+            ctx.fillText('LÚMEN / VIAS AÉREAS (LSA)', 15, 25);
+            ctx.fillText('MEIO INTRACELULAR', 15, 330);
+
+            // Mucus Layer (Top)
+            ctx.fillStyle = simMode === 'normal' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.45)';
+            ctx.fillRect(0, 35, canvas.width, simMode === 'normal' ? 40 : 80);
+            ctx.fillStyle = simMode === 'normal' ? '#10b981' : '#ef4444';
+            ctx.fillText(simMode === 'normal' ? 'Muco Fluido & Hidratado' : 'Muco Desidratado & Hiperviscoso', canvas.width - 200, 50);
+
+            // Epithelial Cell Membrane (Double Line)
+            ctx.fillStyle = '#334155';
+            ctx.fillRect(0, 160, canvas.width, 90); // Cell body
+
+            // Membrane borders
+            ctx.fillStyle = '#64748b';
+            ctx.fillRect(0, 150, canvas.width, 10);
+            ctx.fillRect(0, 250, canvas.width, 10);
+
+            // CFTR Channel
+            ctx.fillStyle = simMode === 'normal' ? '#06b6d4' : '#64748b';
+            ctx.fillRect(200, 140, 40, 120);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 10px Inter';
+            ctx.fillText('CFTR', 205, 205);
+
+            // ENaC Channel
+            ctx.fillStyle = simMode === 'normal' ? '#f59e0b' : '#dc2626';
+            ctx.fillRect(360, 140, 40, 120);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('ENaC', 366, 205);
+
+            // Cilia Animation
+            ctx.strokeStyle = simMode === 'normal' ? '#38bdf8' : '#475569';
+            ctx.lineWidth = 3;
+            for (let x = 30; x < canvas.width; x += 30) {
+                if (x >= 190 && x <= 410) continue; // skip channel positions
+                ctx.beginPath();
+                ctx.moveTo(x, 150);
+                const sweep = simMode === 'normal' ? Math.sin(Date.now() * 0.005 + x) * 10 : 2;
+                ctx.lineTo(x + sweep, 115);
+                ctx.stroke();
+            }
+        }
+
+        function animateSimulation() {
+            drawMembrane();
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateSimulation);
+        }
+
+        // Initialize simulation on load
+        window.onload = function() {
+            initParticles();
+            animateSimulation();
+            renderArticles();
+            initQuiz();
+        };
+
+        // -----------------------------------------------------------------
+        // 2. FILTRAGEM DE MUTAÇÕES
+        // -----------------------------------------------------------------
+        function filterMutations(cls) {
+            const cards = document.querySelectorAll('.mutation-card');
+            const btns = document.querySelectorAll('.mut-filter-btn');
+
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-class') === cls) {
+                    btn.className = "mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white transition-all";
+                } else {
+                    btn.className = "mut-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all";
+                }
+            });
+
+            cards.forEach(card => {
+                if (cls === 'all' || card.classList.contains(cls)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // -----------------------------------------------------------------
+        // 3. TABS CLÍNICAS
+        // -----------------------------------------------------------------
+        function switchTab(tabKey) {
+            const tabs = ['resp', 'dig', 'sweat', 'reprod'];
+            tabs.forEach(key => {
+                const btn = document.getElementById(`tab-${key}`);
+                const content = document.getElementById(`content-${key}`);
+                if (key === tabKey) {
+                    btn.className = "tab-btn py-4 px-3 border-b-2 border-brand-600 font-bold text-sm text-brand-600 flex items-center space-x-2 whitespace-nowrap";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "tab-btn py-4 px-3 border-b-2 border-transparent font-medium text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2 whitespace-nowrap";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // -----------------------------------------------------------------
+        // 4. GALERIA DE ARTIGOS CIENTÍFICOS DADOS E PESQUISA
+        // -----------------------------------------------------------------
+        const articlesData = [
+            {
+                id: 1,
+                title: "Diretrizes Brasileiras de Diagnóstico e Tratamento da Fibrose Cística",
+                authors: "Athanazio RA, et al.",
+                journal: "Jornal Brasileiro de Pneumologia",
+                year: 2017,
+                category: "genetica",
+                abstract: "Documento oficial consolida critérios para o teste do suor, triagem neonatal e protocolos terapêuticos integrados no Brasil.",
+                link: "https://www.scielo.br/j/jbpneu/"
+            },
+            {
+                id: 2,
+                title: "Airway Clearance Techniques in Cystic Fibrosis: Physiology and Evidence",
+                authors: "Flume PA, et al.",
+                journal: "Respiratory Care Journal",
+                year: 2021,
+                category: "fisioterapia",
+                abstract: "Análise comparativa sobre a eficácia da Drenagem Autógena, PEP e oscilação oral na preservação da função pulmonar ($VEF_1$).",
+                link: "https://pubmed.ncbi.nlm.nih.gov/"
+            },
+            {
+                id: 3,
+                title: "Humanização do Cuidado e Qualidade de Vida na Fibrose Cística",
+                authors: "Silva TG, Santos AD.",
+                journal: "Revista Brasileira de Ciências da Saúde",
+                year: 2023,
+                category: "humanizado",
+                abstract: "Investiga o impacto psicossocial da rotina de inalação e fisioterapia diária no bem-estar de pacientes adolescentes e adultos.",
+                link: "https://scielo.org/"
+            },
+            {
+                id: 4,
+                title: "CFTR Modulators and the Future of Cystic Fibrosis Physical Therapy",
+                authors: "Mayer-Hamblett N, et al.",
+                journal: "The Lancet Respiratory Medicine",
+                year: 2022,
+                category: "genetica",
+                abstract: "A revolução da tripla combinação de moduladores (Elexacaftor/Tezacaftor/Ivacaftor) e o realinhamento do papel da fisioterapia.",
+                link: "https://www.thelancet.com/"
+            }
+        ];
+
+        let currentArticleCategory = 'todos';
+
+        function setArticleFilter(cat) {
+            currentArticleCategory = cat;
+            document.querySelectorAll('.art-filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-category') === cat) {
+                    btn.className = "art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-600 text-white";
+                } else {
+                    btn.className = "art-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-600 border border-slate-300";
+                }
+            });
+            renderArticles();
+        }
+
+        function renderArticles() {
+            const search = document.getElementById('article-search').value.toLowerCase();
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+
+            const filtered = articlesData.filter(item => {
+                const matchesCat = currentArticleCategory === 'todos' || item.category === currentArticleCategory;
+                const matchesSearch = item.title.toLowerCase().includes(search) || item.authors.toLowerCase().includes(search) || item.abstract.toLowerCase().includes(search);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="col-span-2 text-center py-8 text-slate-400 text-sm">Nenhum artigo encontrado com estes termos.</div>`;
+                return;
+            }
+
+            filtered.forEach(art => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md">${art.category}</span>
+                            <span class="text-xs font-semibold text-slate-400">${art.year}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base hover:text-brand-600 transition-colors">${art.title}</h4>
+                        <p class="text-xs text-slate-500 font-medium">${art.authors} • <em>${art.journal}</em></p>
+                        <p class="text-xs text-slate-600 leading-relaxed">${art.abstract}</p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex justify-end">
+                        <a href="${art.link}" target="_blank" rel="noopener" class="text-xs font-bold text-brand-600 hover:text-brand-800 inline-flex items-center space-x-1">
+                            <span>Acessar Fonte</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // -----------------------------------------------------------------
+        // 5. QUIZ INTERATIVO
+        // -----------------------------------------------------------------
+        const quizQuestions = [
+            {
+                q: "Qual é o mecanismo fisiopatológico primário provocado pela ausência/defeito da proteína CFTR no epitélio respiratório?",
+                options: [
+                    "Diminuição da produção de muco pelas células caliciformes.",
+                    "Falha no efluxo de Cl⁻ e hiperabsorção compensatória de Na⁺, desidratando o LSA.",
+                    "Destruição direta dos cílios epiteliais por toxinas autoimunes.",
+                    "Aumento descontrolado da oxigenação tecidual."
+                ],
+                correct: 1,
+                explanation: "Sem o efluxo ativo de Cl⁻ via CFTR, o canal ENaC reabsorve Na⁺ em excesso, drenando a água da superfície celular por osmose e tornando o muco espesso."
+            },
+            {
+                q: "Qual é a mutação mais frequente no mundo relacionada à Fibrose Cística (Classe II)?",
+                options: [
+                    "G542X",
+                    "G551D",
+                    "F508del",
+                    "R117H"
+                ],
+                correct: 2,
+                explanation: "A mutação F508del é uma deleção da fenilalanina na posição 508 que provoca erro de enovelamento proteico em cerca de 70% dos alelos mundiais."
+            },
+            {
+                q: "Qual exame é considerado o 'Padrão-Ouro' para a confirmação diagnóstica da Fibrose Cística?",
+                options: [
+                    "Dosagem do Teste do Suor (Cloro no suor ≥ 60 mmol/L).",
+                    "Espirometria Isolada.",
+                    "Radiografia Simples de Tórax.",
+                    "Gasometria Arterial."
+                ],
+                correct: 0,
+                explanation: "O Teste do Suor quantifica o cloro no suor por iontoforese pela pilocarpina. Valores de Cl⁻ ≥ 60 mmol/L confirmam a doença."
+            },
+            {
+                q: "O que caracteriza o fenômeno de 'Tixotropismo' explorado pelos dispositivos de Oscilação Oral de Alta Frequência (OOAF)?",
+                options: [
+                    "Aumento da temperatura do ar inalado.",
+                    "Propriedade na qual o muco reduz sua viscosidade ao ser submetido à vibração mecânica.",
+                    "Inibição direta da replicação bacteriana.",
+                    "Fechamento voluntário da glote durante a respiração."
+                ],
+                correct: 1,
+                explanation: "O tixotropismo é a capacidade física do muco hiperviscoso de se fluidificar quando submetido à oscilação/vibração contínua de ar."
+            },
+            {
+                q: "Dentro de uma visão humanizada da fisioterapia na Fibrose Cística, qual conduta é indispensável?",
+                options: [
+                    "Impor uma rotina rígida sem adaptação aos horários do paciente.",
+                    "Focar exclusivamente nos exames de imagem e ignorar a rotina familiar.",
+                    "Promover a autonomia do paciente, educação em saúde e pactuação das técnicas.",
+                    "Substituir todo o tratamento farmacológico por exercícios físicos isolados."
+                ],
+                correct: 2,
+                explanation: "A adesão a longo prazo depende de um cuidado humanizado e biopsicossocial que respeite a rotina, o bem-estar e a autonomia do paciente e de sua família."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let selectedOption = null;
+
+        function initQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            document.getElementById('quiz-content').classList.remove('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            selectedOption = null;
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-step-text').textContent = `Pergunta ${currentQuizIndex + 1} de ${quizQuestions.length}`;
+            document.getElementById('quiz-score-text').textContent = `Pontuação: ${quizScore}`;
+            document.getElementById('quiz-progress-bar').style.width = `${((currentQuizIndex + 1) / quizQuestions.length) * 100}%`;
+
+            document.getElementById('quiz-question').textContent = q.q;
+
+            const optsContainer = document.getElementById('quiz-options');
+            optsContainer.innerHTML = '';
+
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.className = "hidden p-4 rounded-xl text-xs sm:text-sm font-medium";
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700/80 text-xs sm:text-sm text-slate-200 transition-all flex items-start space-x-3";
+                btn.innerHTML = `
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center font-bold text-xs flex-shrink-0">${String.fromCharCode(65 + idx)}</span>
+                    <span>${opt}</span>
+                `;
+                btn.onclick = () => handleSelectOption(idx);
+                optsContainer.appendChild(btn);
+            });
+        }
+
+        function handleSelectOption(index) {
+            if (selectedOption !== null) return; // Travar após seleção
+            selectedOption = index;
+
+            const q = quizQuestions[currentQuizIndex];
+            const optsBtns = document.getElementById('quiz-options').children;
+            const feedback = document.getElementById('quiz-feedback');
+
+            if (index === q.correct) {
+                quizScore += 20;
+                optsBtns[index].className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-950/60 text-emerald-200 text-xs sm:text-sm transition-all flex items-start space-x-3";
+                feedback.className = "p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-900/50 border border-emerald-700 text-emerald-200";
+                feedback.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i><strong>Correto!</strong> ${q.explanation}`;
+            } else {
+                optsBtns[index].className = "w-full text-left p-4 rounded-xl border border-red-500 bg-red-950/60 text-red-200 text-xs sm:text-sm transition-all flex items-start space-x-3";
+                optsBtns[q.correct].className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-950/60 text-emerald-200 text-xs sm:text-sm transition-all flex items-start space-x-3";
+                feedback.className = "p-4 rounded-xl text-xs sm:text-sm font-medium bg-red-900/50 border border-red-700 text-red-200";
+                feedback.innerHTML = `<i class="fa-solid fa-circle-xmark text-red-400 mr-2"></i><strong>Incorreto.</strong> ${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score-text').textContent = `Pontuação: ${quizScore}`;
+            document.getElementById('quiz-next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-content').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('quiz-result-msg').innerHTML = `
+                Sua pontuação final foi de <strong class="text-tealbrand-400 text-lg">${quizScore} / 100 pontos</strong>.<br>
+                ${quizScore >= 80 ? 'Excelente aproveitamento! Demonstra alto domínio da fisiopatologia e intervenção fisioterapêutica.' : 'Bom trabalho! Revise os módulos do site para consolidar ainda mais seus conhecimentos.'}
+            `;
+        }
+
+        function restartQuiz() {
+            initQuiz();
+        }
+
+        // Toggle Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
